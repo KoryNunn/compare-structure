@@ -15,13 +15,10 @@ module.exports = function compare(target, comparator, exact){
             if(!compare(target[key], comparator[key])){
                 return false;
             }
-        }else if(
-            exact &&
-            (!(key in target) || (target[key] && typeof target[key] === 'object'))
-        ){
-            return false;
+        }else if(exact){
+            return (key in target) && (!target[key] || typeof target[key] !== 'object');
         }
     }
 
     return true;
-}
+};
