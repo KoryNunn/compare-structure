@@ -12,7 +12,7 @@ module.exports = function compare(target, comparator, exact){
 
     for(var key in comparator){
         if(comparator[key] && typeof comparator[key] === 'object'){
-            if(!compare(target[key], comparator[key])){
+            if(!compare(target[key], comparator[key], exact)){
                 return false;
             }
         }else if(exact){
