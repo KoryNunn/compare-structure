@@ -1,21 +1,21 @@
-module.exports = function compare(target, comparator, exact){
+module.exports = function compare(target, comparator, strict){
     if(!comparator || typeof comparator !== 'object'){
         return true;
     }
 
     if(
         !target || typeof target !== 'object' ||
-        exact && Object.keys(target).length !== Object.keys(comparator).length
+        strict && Object.keys(target).length !== Object.keys(comparator).length
     ){
         return false;
     }
 
     for(var key in comparator){
         if(comparator[key] && typeof comparator[key] === 'object'){
-            if(!compare(target[key], comparator[key], exact)){
+            if(!compare(target[key], comparator[key], strict)){
                 return false;
             }
-        }else if(exact){
+        }else if(strict){
             return (key in target) && (!target[key] || typeof target[key] !== 'object');
         }
     }

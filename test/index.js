@@ -76,7 +76,7 @@ test('arrays', function(t){
     t.ok(compare(x, []));
 });
 
-test('exact arrays 1', function(t){
+test('strict arrays 1', function(t){
     t.plan(1);
 
     var x = [1,2,3];
@@ -84,7 +84,7 @@ test('exact arrays 1', function(t){
     t.notOk(compare(x, [], true));
 });
 
-test('exact arrays 2', function(t){
+test('strict arrays 2', function(t){
     t.plan(1);
 
     var x = [1,2,3];
