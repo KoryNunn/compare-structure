@@ -1,0 +1,28 @@
+{
+  "name": "compare-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.0.1"
+  },
+  "dependencies": {
+    "tape": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/compare-structure.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/compare-structure/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/compare-structure#readme",
+  "description": ""
+}
